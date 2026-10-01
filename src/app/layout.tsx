@@ -10,7 +10,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Higgsfield AI - Creative Suite",
+  title: "Native Suite",
   description: "The premium AI-native video creation platform.",
 };
 

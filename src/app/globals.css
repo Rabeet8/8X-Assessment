@@ -143,6 +143,16 @@ a {
   margin-bottom: 32px;
 }
 
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .hero-grid .grid-card {
+    min-height: 280px;
+  }
+}
+
 .grid-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -158,6 +168,22 @@ a {
 
 .card-large {
   grid-row: span 2;
+}
+
+@media (max-width: 900px) {
+  .card-large {
+    grid-row: auto;
+  }
+}
+
+.hero-side-element {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .hero-side-element {
+    display: none !important;
+  }
 }
 
 .card-image-bg {

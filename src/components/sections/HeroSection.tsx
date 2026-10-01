@@ -24,6 +24,7 @@ export default function HeroSection() {
 
       {/* Left Element */}
       <motion.div
+        className="hero-side-element"
         initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}
         style={{ position: 'absolute', left: '5%', top: '40%', zIndex: 2, maxWidth: '200px' }}
       >
@@ -33,6 +34,7 @@ export default function HeroSection() {
 
       {/* Right Element */}
       <motion.div
+        className="hero-side-element"
         initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }}
         style={{ position: 'absolute', right: '5%', top: '40%', zIndex: 2, maxWidth: '200px', textAlign: 'right' }}
       >
