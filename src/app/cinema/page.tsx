@@ -182,6 +182,36 @@ export default function CinemaStudioPage() {
             })}
           </div>
 
+          <button 
+            onClick={() => {
+              alert("In a real app, these parameters would be sent to a backend GPU server (using FFmpeg or a custom renderer) to bake the physical camera motions into a high-quality MP4 file. Native browser video recording is limited.\n\nSimulating export by downloading render instructions...");
+              const data = JSON.stringify(params, null, 2);
+              const blob = new Blob([data], { type: 'text/plain' });
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement('a');
+              a.href = url;
+              a.download = 'Render_Instructions.txt';
+              a.click();
+              URL.revokeObjectURL(url);
+            }}
+            style={{ 
+              width: '100%', 
+              background: 'var(--foreground)', 
+              color: 'var(--background)', 
+              padding: '16px', 
+              borderRadius: '8px', 
+              fontWeight: 800, 
+              border: 'none', 
+              cursor: 'pointer', 
+              display: 'flex', 
+              justifyContent: 'center', 
+              opacity: videoUrl ? 1 : 0.5 
+            }}
+            disabled={!videoUrl}
+          >
+            Export Final Video
+          </button>
+
           <div style={{ marginTop: 'auto', background: 'rgba(204,255,0,0.05)', border: '1px solid rgba(204,255,0,0.2)', padding: '16px', borderRadius: '8px' }}>
             <h3 style={{ fontSize: '14px', color: 'var(--accent-yellow)', fontWeight: 800, marginBottom: '8px' }}>Active AI Model</h3>
             <p style={{ fontSize: '12px', color: '#aaa', lineHeight: '1.5' }}>Seedance 2.5 architecture is generating in real-time. Camera motions are physically bounded.</p>
