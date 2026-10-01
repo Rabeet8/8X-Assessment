@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Native Suite (System v2.0)
 
-## Getting Started
+![Hero Screenshot](./public/screenshots/hero.png)
 
-First, run the development server:
+Native Suite is a cutting-edge, AI-native creative platform designed to empower the next generation of visual storytellers. By combining intuitive user interfaces with deterministic AI workflows, Native Suite allows users to seamlessly generate, control, and export high-converting marketing campaigns and cinematic video sequences entirely within their browser.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Everything is designed to be highly interactive, deeply modular, and completely deterministic.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Core Features & Studios
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The suite is divided into four primary workspaces, each dedicated to a specific part of the creative AI workflow.
 
-## Learn More
+### 1. Campaign Studio (Cutroom)
+![Campaign Studio](./public/screenshots/campaign.png)
+Turn a demo product into a structured, short-form advertising campaign. 
+- **Deterministic Briefs:** Select a target audience and campaign goal.
+- **Concept Generation:** The AI creates 3 distinct creative concepts with unique tones and hooks.
+- **Editable Storyboard:** A 5-shot timeline where you can edit the title, duration, action, and *camera motion* for every shot.
+- **Interactive Vertical Preview:** Press play to watch the actual CSS-animated camera motions (pan, zoom, tilt) play out in real-time synced to your storyboard!
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Marketing Studio
+![Marketing Studio](./public/screenshots/marketing.png)
+Convert any product URL into a high-converting video ad instantly.
+- Enter a product URL (like a Shopify page).
+- The studio simulates extracting assets and instantly generates a cohesive video ad based on the product data.
+- View recent generation history in a beautiful grid.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Cinema Studio
+![Cinema Studio](./public/screenshots/cinema.png)
+Advanced virtual camera controls applied to static imagery or videos.
+- Upload any image/video or use a remote demo video.
+- Precisely tweak focal length, pan X/Y, tilt, roll, motion blur, color temperature, and contrast using reactive sliders.
+- **Local Export:** Safely bypasses browser CORS restrictions to instantly download the rendered MP4 right to your local machine.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Canvas Workspace
+![Canvas Workspace](./public/screenshots/canvas.png)
+Node-based visual AI pipelines.
+- Build complex generative workflows by visually connecting nodes (Master Prompt → Image Generation → Camera Motion → Render).
+- Perfect for power users who want ultimate control over the generative AI pipeline routing.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Technology Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Styling:** Vanilla CSS & Inline Styles for maximum flexibility and control
+- **Animations:** [Framer Motion](https://www.framer.com/motion/) for buttery-smooth page transitions, micro-interactions, and complex layout animations
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Authentication:** [Supabase](https://supabase.com/) (Email & Password native integration)
+- **Node UI:** `reactflow` for the Canvas Workspace
+
+---
+
+## 📦 Local Setup Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/YourUsername/8X-Assessment.git
+   cd 8X-Assessment
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Supabase Auth:**
+   - Create a project at [Supabase](https://supabase.com).
+   - Ensure the "Email" authentication provider is enabled (and optionally turn off "Confirm Email" for instant sign-ins).
+   - Create a `.env.local` file in the root directory:
+     ```env
+     NEXT_PUBLIC_SUPABASE_URL=your-project-url
+     NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+     ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to explore Native Suite.

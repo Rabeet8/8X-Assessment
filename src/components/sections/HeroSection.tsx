@@ -5,11 +5,11 @@ import { ChevronDown } from 'lucide-react';
 export default function HeroSection() {
   return (
     <div style={{ position: 'relative', width: '100%', height: '85vh', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', marginBottom: '40px' }}>
-      
+
       {/* 3D Animated Square Grid Background */}
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: '15%', zIndex: 0, perspective: '1000px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <motion.div 
-          animate={{ rotateX: [30, 40, 30], scale: [1.2, 1.3, 1.2] }} 
+        <motion.div
+          animate={{ rotateX: [30, 40, 30], scale: [1.2, 1.3, 1.2] }}
           transition={{ repeat: Infinity, duration: 15, ease: "easeInOut" }}
           style={{
             width: '150%', height: '150%',
@@ -21,9 +21,9 @@ export default function HeroSection() {
         />
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'radial-gradient(circle at center, transparent 0%, var(--background) 70%)' }} />
       </div>
-      
+
       {/* Left Element */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}
         style={{ position: 'absolute', left: '5%', top: '40%', zIndex: 2, maxWidth: '200px' }}
       >
@@ -32,7 +32,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Right Element */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 }}
         style={{ position: 'absolute', right: '5%', top: '40%', zIndex: 2, maxWidth: '200px', textAlign: 'right' }}
       >
@@ -42,22 +42,22 @@ export default function HeroSection() {
 
       {/* Center Main Content */}
       <div style={{ textAlign: 'center', zIndex: 2, padding: '20px', pointerEvents: 'none', marginBottom: '10%' }}>
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
           style={{ fontSize: 'clamp(3rem, 8vw, 7rem)', fontWeight: 900, letterSpacing: '-0.04em', lineHeight: 1, textShadow: '0 10px 40px rgba(0,0,0,0.8)' }}
         >
-          CREATIVE <span style={{ color: 'transparent', WebkitTextStroke: '2px var(--accent-yellow)' }}>SUITE</span>
+          NATIVE <span style={{ color: 'transparent', WebkitTextStroke: '2px var(--accent-yellow)' }}>SUITE</span>
         </motion.h1>
       </div>
 
       {/* Neon Sliding Bar */}
       <div style={{ position: 'absolute', bottom: '12%', width: '100%', background: 'var(--accent-yellow)', padding: '12px 0', overflow: 'hidden', zIndex: 2, display: 'flex' }}>
-        <motion.div 
-          animate={{ x: [0, -1500] }} 
+        <motion.div
+          animate={{ x: [0, -1500] }}
           transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
           style={{ whiteSpace: 'nowrap', display: 'flex', gap: '32px', color: '#000', fontWeight: 900, fontSize: '14px', letterSpacing: '1px' }}
         >
-          {Array.from({length: 4}).flatMap((_, i) => [
+          {Array.from({ length: 4 }).flatMap((_, i) => [
             "AI-NATIVE PLATFORM",
             "CINEMATIC CAMERA CONTROLS",
             "URL TO VIDEO ADS",
@@ -70,7 +70,7 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom Center Indicator */}
-      <motion.a 
+      <motion.a
         href="#cinema"
         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}
         style={{ position: 'absolute', bottom: '2%', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', zIndex: 2, cursor: 'pointer', textDecoration: 'none' }}
