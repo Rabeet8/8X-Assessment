@@ -76,7 +76,7 @@ export default function CanvasPage() {
     <div style={{ height: 'calc(100vh - 56px)', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
       
       {/* Header Bar */}
-      <div style={{ height: '60px', flexShrink: 0, borderBottom: '1px solid #222', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 24px', background: '#0a0a0a', zIndex: 10 }}>
+      <div style={{ minHeight: '60px', flexShrink: 0, borderBottom: '1px solid #222', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 24px', background: '#0a0a0a', zIndex: 10, flexWrap: 'wrap', gap: '12px' }}>
         <h1 style={{ fontSize: '18px', fontWeight: 800, color: 'var(--accent-yellow)', letterSpacing: '1px' }}>CANVAS WORKSPACE</h1>
         <div style={{ display: 'flex', gap: '12px' }}>
           <button onClick={handleRunPipeline} style={{ background: isRunning ? '#333' : 'var(--accent-yellow)', color: isRunning ? '#888' : '#000', border: 'none', padding: '8px 24px', borderRadius: '6px', fontWeight: 800, display: 'flex', gap: '8px', alignItems: 'center', cursor: isRunning ? 'not-allowed' : 'pointer', transition: 'all 0.2s' }}>
@@ -108,13 +108,13 @@ export default function CanvasPage() {
             <div style={{ position: 'absolute', inset: 0, zIndex: 30, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(5px)' }}>
               <motion.div 
                 initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
-                style={{ background: '#111', border: '1px solid var(--accent-yellow)', borderRadius: '16px', padding: '24px', boxShadow: '0 20px 60px rgba(0,0,0,0.8)' }}
+                style={{ background: '#111', border: '1px solid var(--accent-yellow)', borderRadius: '16px', padding: '24px', boxShadow: '0 20px 60px rgba(0,0,0,0.8)', width: '90%', maxWidth: '650px' }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
                   <h3 style={{ color: 'var(--accent-yellow)', fontSize: '18px', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '8px' }}><Video size={20} /> Generated Pipeline Output</h3>
                   <X size={20} color="#888" style={{ cursor: 'pointer' }} onClick={() => setShowOutput(false)} />
                 </div>
-                <div style={{ width: '600px', height: '337px', background: '#000', borderRadius: '8px', overflow: 'hidden', position: 'relative' }}>
+                <div style={{ width: '100%', maxWidth: '600px', aspectRatio: '16/9', background: '#000', borderRadius: '8px', overflow: 'hidden', position: 'relative' }}>
                   <video 
                     src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4" 
                     controls 
@@ -136,7 +136,7 @@ export default function CanvasPage() {
           {selectedNode && (
             <motion.div 
               initial={{ x: 400 }} animate={{ x: 0 }} exit={{ x: 400 }} transition={{ type: 'spring', damping: 20 }}
-              style={{ position: 'absolute', top: 0, right: 0, width: '350px', height: '100%', background: '#111', borderLeft: '1px solid #333', zIndex: 20, display: 'flex', flexDirection: 'column' }}
+              style={{ position: 'absolute', top: 0, right: 0, width: '100%', maxWidth: '350px', height: '100%', background: '#111', borderLeft: '1px solid #333', zIndex: 20, display: 'flex', flexDirection: 'column' }}
             >
               <div style={{ padding: '20px', borderBottom: '1px solid #333', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <h3 style={{ color: '#fff', fontSize: '16px', fontWeight: 800 }}>Node Configuration</h3>
