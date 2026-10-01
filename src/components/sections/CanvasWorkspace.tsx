@@ -12,7 +12,7 @@ export default function CanvasWorkspace() {
         <p style={{ color: 'var(--text-muted)', fontSize: '16px', fontWeight: 500, marginTop: '8px' }}>Visually chain AI models together in a node-based editor</p>
       </div>
 
-      <div className="tools-grid" style={{ gridTemplateColumns: '1fr 2fr' }}>
+      <div className="tools-grid grid-responsive-2">
         <div className="tool-card" style={{ height: 'auto', padding: '32px' }}>
           <Workflow size={32} color="var(--accent-yellow)" style={{ marginBottom: '16px' }} />
           <h3 style={{ fontSize: '20px', fontWeight: 800, marginBottom: '12px' }}>Infinite Possibilities</h3>

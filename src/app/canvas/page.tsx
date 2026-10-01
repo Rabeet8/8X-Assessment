@@ -162,7 +162,7 @@ export default function CanvasPage() {
                 {selectedNode === '3' && (
                   <>
                     <label style={{ color: '#aaa', fontSize: '12px', fontWeight: 600 }}>Camera Motion</label>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                    <div className="grid-responsive-2" style={{ gap: '12px' }}>
                       <label style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#fff', fontSize: '14px' }}><input type="checkbox" defaultChecked /> Pan Left</label>
                       <label style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#fff', fontSize: '14px' }}><input type="checkbox" /> Pan Right</label>
                       <label style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#fff', fontSize: '14px' }}><input type="checkbox" defaultChecked /> Zoom In</label>

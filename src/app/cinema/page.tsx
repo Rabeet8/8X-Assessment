@@ -92,7 +92,7 @@ export default function CinemaStudioPage() {
       </div>
 
       {/* Main Content */}
-      <div style={{ flex: 1, display: 'flex', padding: '24px', gap: '24px', overflow: 'hidden' }}>
+      <div className="cinema-layout">
         
         {/* Viewport */}
         <div style={{ flex: 1, background: '#1c1c1c', borderRadius: '12px', border: '1px solid #333', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
@@ -156,7 +156,7 @@ export default function CinemaStudioPage() {
         </div>
 
         {/* Camera Controls Panel */}
-        <div style={{ width: '340px', background: '#1c1c1c', borderRadius: '12px', border: '1px solid #333', padding: '24px', display: 'flex', flexDirection: 'column', gap: '24px', overflowY: 'auto' }}>
+        <div className="cinema-sidebar">
           <h2 style={{ fontSize: '16px', fontWeight: 800, color: '#fff', display: 'flex', alignItems: 'center', gap: '8px', borderBottom: '1px solid #333', paddingBottom: '16px' }}>
             <Sliders size={18} color="var(--accent-yellow)"/> Camera Parameters
           </h2>

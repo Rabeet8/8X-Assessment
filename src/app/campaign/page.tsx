@@ -179,7 +179,7 @@ export default function CampaignGeneratorPage() {
                 <h2 style={{ fontSize: '32px', fontWeight: 900, marginBottom: '8px' }}>Cutroom Setup</h2>
                 <p style={{ color: '#888', marginBottom: '32px' }}>Turn a demo product into a structured short-form advertising campaign.</p>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
+                <div className="grid-responsive-2">
                   {/* Products */}
                   <div>
                     <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '16px', color: '#ccc' }}>1. Choose Demo Product</h3>
@@ -248,7 +248,7 @@ export default function CampaignGeneratorPage() {
                 <h2 style={{ fontSize: '28px', fontWeight: 800, marginBottom: '8px' }}>Creative Concepts</h2>
                 <p style={{ color: '#888', marginBottom: '32px' }}>Choose a deterministic creative direction for {selectedProduct.name}.</p>
                 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
+                <div className="grid-responsive-3">
                   {concepts.map((concept) => (
                     <motion.div 
                       key={concept.id}
@@ -284,7 +284,7 @@ export default function CampaignGeneratorPage() {
 
             {/* STEP 4 & 5: STORYBOARD, HOOKS & PREVIEW */}
             {step === 4 && (
-              <motion.div key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} style={{ display: 'flex', gap: '32px' }}>
+              <motion.div key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="flex-responsive">
                 
                 {/* Left: Preview Player */}
                 <div style={{ width: '340px', flexShrink: 0 }}>
@@ -378,7 +378,7 @@ export default function CampaignGeneratorPage() {
                         >
                           <Video size={20} />
                         </div>
-                        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                        <div style={{ flex: 1 }} className="grid-responsive-2">
                           <input 
                             value={shot.title}
                             onChange={(e) => {
