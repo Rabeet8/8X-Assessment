@@ -69,7 +69,7 @@ export default function Footer() {
              {"CREATE BEYOND".split('').map((char, i) => (
                <motion.span
                  key={i}
-                 whileHover={{ color: 'var(--accent-yellow)', WebkitTextStroke: '0px', textShadow: '0 0 40px rgba(204,255,0,0.8)' }}
+                 whileHover={{ color: 'var(--accent-yellow)', WebkitTextStroke: '0px', textShadow: '0 0 40px rgba(204,255,0,0.8)' } as any}
                  style={{
                    display: 'inline-block',
                    whiteSpace: 'pre',
